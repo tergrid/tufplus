@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 class leaderArray {
   public ArrayList<Integer> leaders(int[] nums) {
@@ -7,20 +8,14 @@ class leaderArray {
     int maxFromRight = nums[n - 1];
     al.add(maxFromRight);
 
-    for (int num = n - 1; num >= 0; num--) {
-      if (maxFromRight < nums[num]) {
-        maxFromRight = nums[num];
-        al.add(nums[num]);
-      } else if (nums[num] < maxFromRight) {
-        maxFromRight = nums[num];
+    for (int i = n - 2; i >= 0; i--) {
+      if (nums[i] > maxFromRight) {
+        al.add(nums[i]);
+        maxFromRight = nums[i];
       }
     }
-    ArrayList<Integer> result = new ArrayList<>();
-    for (int i = al.size() - 1; i >= 0; i--) {
-      result.add(al.get(i));
-    }
-
-    return result;
+    Collections.reverse(al);
+    return al;
   }
 
   public static void main(String[] args) {
