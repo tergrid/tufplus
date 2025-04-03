@@ -1,7 +1,4 @@
-package Hashing;
-
 import java.util.HashMap;
-
 class sumOfHighestAndLowestFrequency {
   public int sumOfHighestAndLowestFrequencies(int[] nums) {
     int n = nums.length;
