@@ -4,7 +4,7 @@ public class java24 {
         // Java 21+ feature: String templates (Preview in Java 21, stabilized in Java 24)
         System.out.println("Java version: " + System.getProperty("java.version"));
         
-        // Test virtual threads (introduced in Java 21)
+k        // Test virtual threads (introduced in Java 21)
         Runnable task = () -> {
             System.out.println("Running in a virtual thread");
         };
